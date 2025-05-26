@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'   // FlutterFire
+    id 'org.jetbrains.kotlin.android'     // Kotlin
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace     = "com.anve.chatto"
+    compileSdk    = flutter.compileSdkVersion
+    ndkVersion    = flutter.ndkVersion
+
+    defaultConfig {
+        applicationId = "com.anve.chatto"
+        minSdk        = 23
+        targetSdk     = flutter.targetSdkVersion
+        versionCode   = flutter.versionCode
+        versionName   = flutter.versionName
+    }
+
+    compileOptions {
+        // ✅ Switch to Java 17
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        // ✅ Also target Java 17 on the Kotlin side
+        jvmTarget = "17"
+    }
+
+    buildTypes {
+        release {
+            // Your release signing config here
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}

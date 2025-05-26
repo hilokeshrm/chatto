@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "574184186632",
+    "project_id": "chatto-6dcd3",
+    "storage_bucket": "chatto-6dcd3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574184186632:android:5f58c63ef0396fe85102bd",
+        "android_client_info": {
+          "package_name": "com.anve.chatto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574184186632-lana80k1j5o0vsdeu1ht638gjh2231ng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBclxCNrO-RrJe0Q9zQlpU1IR2s0qc2jRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574184186632-lana80k1j5o0vsdeu1ht638gjh2231ng.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "574184186632-njau7su5s50177vfnu01ont5qbnmaa42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anve.chatto"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
