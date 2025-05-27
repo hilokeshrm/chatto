@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../../app/app.dart'; // Make sure this path is correct for your app structure
 
 enum FontSizeOption { small, medium, large }
 
@@ -36,6 +37,7 @@ class _MenuPageState extends State<MenuPage> {
   void initState() {
     super.initState();
     _loadProfile();
+    _darkMode = themeModeNotifier.value == ThemeMode.dark;
   }
 
   Future<void> _loadProfile() async {
@@ -185,9 +187,8 @@ class _MenuPageState extends State<MenuPage> {
                 backgroundColor: Colors.grey[300],
                 backgroundImage:
                 photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
-                child: photoUrl.isEmpty
-                    ? const Icon(Icons.person, size: 32)
-                    : null,
+                child:
+                photoUrl.isEmpty ? const Icon(Icons.person, size: 32) : null,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -224,8 +225,11 @@ class _MenuPageState extends State<MenuPage> {
             trailing: Switch(
               value: _darkMode,
               onChanged: (v) {
-                setState(() => _darkMode = v);
-                // TODO: Apply app-wide theme change via a state manager or callback
+                setState(() {
+                  _darkMode = v;
+                  themeModeNotifier.value =
+                  v ? ThemeMode.dark : ThemeMode.light;
+                });
               },
             ),
           ),
