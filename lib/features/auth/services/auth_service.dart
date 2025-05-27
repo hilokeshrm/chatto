@@ -10,7 +10,7 @@ class AuthService {
 
     if (kIsWeb) {
       googleSignIn = GoogleSignIn(
-        clientId: '574184186632-lana80k1j5o0vsdeu1ht638gjh2231ng.apps.googleusercontent.com',
+        //clientId: 'CLIENT_ID.apps.googleusercontent.com', - Change this to a real Client ID
       );
     } else {
       googleSignIn = GoogleSignIn(); // For Android/iOS
