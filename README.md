@@ -1,20 +1,20 @@
-#Pingly - one on one messaging app
+# Pingly - one on one messaging app
 
 ## Overview and Objectives
-A simple, clean, and minimal one-on-one chat application aimed at a small to medium community. Users register via email/password, see a list of all registered members, and can message anyone privately with text and emojis. No presence indicators or notifications. Messages are stored indefinitely. Initial focus is on an MVP with potential for future expansion.
+A simple, clean, and minimal one-on-one chat application aimed at a small to medium community. Users register via Google Account, see a list of all registered members, and can message anyone privately with text and emojis. No presence indicators or notifications. Messages are stored indefinitely. Initial focus is on an MVP with potential for future expansion.
 
 ## Target Audience
 - Friends or community members who want easy, direct one-on-one communication.  
 - Users comfortable with a minimal, straightforward chat experience.
 
 ## Core Features and Functionality
-- User registration and login with email and password.  
+- User registration and login with Google Account.  
 - Display a list of all registered users with display names.  
 - Open messaging: any user can message any other user.  
 - Support for text messages and emojis.  
 - Chat history stored and accessible indefinitely.  
 - No online/offline presence indicators.  
-- No push notifications initially.  
+- No push notifications initially (Partially Working).  
 - Clean and minimal user interface design.
 
 ## High-Level Technical Stack Recommendations
@@ -70,25 +70,11 @@ Firebase + Flutter is a popular combo for rapid MVP development of chat apps due
 - Blocking and reporting features for community safety.  
 - Group chats or channels.
 
+---
 
-# chatto
+# App Structure
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
+```
 lib/
 ├── main.dart
 ├── app/
@@ -122,3 +108,6 @@ lib/
 ├── navigation/
 │   └── bottom_nav.dart         # BottomNavBar logic
 └── firebase_options.dart       # Firebase config
+
+
+```
